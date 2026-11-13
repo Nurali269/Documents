@@ -219,3 +219,65 @@ print(dont_give_me_five(1, 9))
 print(dont_give_me_five(4, 17))
 
 print()
+
+#задача 25
+def max_multiple(divisor, bound):
+    return bound - (bound % divisor)
+print(max_multiple(3, 10))
+print(max_multiple(7, 20))
+
+print()
+
+#задача 26
+def square_digits(num):
+    return int(''.join(str(int(c)**2) for c in str(num)))  
+print(square_digits(9119))
+print(square_digits(1234))
+
+print()
+
+#задача 27
+def printer_error(s):
+    return f"{sum(c > 'm' for c in s)}/{len(s)}"
+print(printer_error("aaabbbbhaijjjm"))
+print(printer_error("aaaxbbbbyyhwawiwjjjwwm"))
+
+print()
+
+#задача 28
+import heapq
+
+def queue_time(customers, n):
+    t = [0] * n
+    for c in customers:
+        heapq.heappushpop(t, t[0] + c)
+    return max(t, default=0)
+print(queue_time([5, 3, 4], 1))
+print(queue_time([10, 2, 3, 3], 2))
+print(queue_time([2, 3, 10], 2))
+
+print()
+
+#задача 29
+def in_array(array1, array2):
+    return sorted(set(a for a in array1 if any(a in b for b in array2)))
+print(in_array(["arp", "live", "strong"], ["lively", "alive", "harp", "sharp", "armstrong"]))
+print(in_array(["tarp", "mice", "bull"], ["lively", "alive", "harp", "sharp", "armstrong"]))
+
+print()
+
+#задача 30
+def stray(arr):
+    return min(set(arr), key=arr.count)
+print(stray([1, 1, 2]))
+print(stray([17, 17, 3, 17, 17, 17, 17]))
+
+print()
+
+#задача 31
+def capitalize(s):
+    return ["".join(c.upper() if i % 2 == e else c for i, c in enumerate(s)) for e in (0, 1)]
+print(capitalize("abcdef"))
+print(capitalize("Hello World"))
+
+print()
