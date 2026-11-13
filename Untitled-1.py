@@ -78,3 +78,51 @@ print(is_pangram("Pack my box with five dozen liquor jugs."))
 
 print()
 
+#задача 7
+def validate_pin(pin):
+    return len(pin) in (4, 6) and pin.isdigit()
+print(validate_pin("1234"))
+print(validate_pin("123456"))
+print(validate_pin("12345"))
+print(validate_pin("1234a"))
+print(validate_pin("1234567"))
+
+print()
+#задача 8
+def open_or_senior(data):
+    return ["Senior" if age >= 55 and handicap > 7 else "Open" for age, handicap in data]
+print(open_or_senior([(45, 12), (55, 21), (19, -2), (104, 20)]))
+
+print()
+#задача 9
+def sort_by_length(arr):
+    return sorted(arr, key=len)
+print(sort_by_length(["Telescope", "Glasses", "Eye", "Opitcs", "I"]))
+
+print()
+
+#задача 10
+def solution(number):
+    return sum(i for i in range(number) if i % 3 == 0 or i % 5 == 0)
+print(solution(10))
+print(solution(20))
+print(solution(30))
+
+print()
+
+#задача 11
+def reverse_words(text):
+    return " ".join(word[::-1] for word in text.split (" "))
+print(reverse_words("Hello World"))
+print(reverse_words("Python is fun"))
+
+print()
+
+#задача 12
+def count_bits(n):
+    return bin(n).count("1")
+print(count_bits(5))
+print(count_bits(10))
+print(count_bits(15))
+
+print()
