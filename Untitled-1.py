@@ -281,3 +281,35 @@ print(capitalize("abcdef"))
 print(capitalize("Hello World"))
 
 print()
+
+#задача 32
+def check_exam(arr1,arr2):
+    return max(0, sum(4 if a == b else (-1 if b else 0) for a, b in zip(arr1, arr2)))
+print(check_exam(["a", "b", "c", "d"], ["a", "b", "c", "d"]))
+print(check_exam(["a", "b", "c", "d"], ["a", "b", "c", ""]))
+
+print()
+
+#задача 33
+def solution(s):
+    return "".join(c if c.islower() else f" {c}" for c in s)
+print(solution("camelCase"))
+print(solution("thisIsATest"))
+
+print()
+
+#задача 34
+def sequence_sum(begin_number, end_number, step):
+    return sum(range(begin_number, end_number + 1, step))
+print(sequence_sum(2, 10, 2))
+print(sequence_sum(1, 5, 1))
+
+print()
+
+#задача 35
+def solve(s):
+    return s.upper() if sum(c.isupper() for c in s) * 2 > len(s) else s.lower()
+print(solve("Hello World"))
+print(solve("hELLO wORLD"))
+
+print()
