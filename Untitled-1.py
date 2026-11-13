@@ -176,3 +176,46 @@ print(high("what time are we climbing up the volcano"))
 print(high("take me to semynak"))
 
 print()
+
+#задача 19
+def find_uniq(arr):
+    return next(x for x in set(arr) if arr.count(x) == 1)
+print(find_uniq([1, 1, 1, 2, 1, 1]))
+print(find_uniq([0, 0, 0.55, 0, 0]))
+print(find_uniq([3, 3, 3, 3, 3, 4]))
+
+print()
+
+#задача 20
+def is_anagram(test, original):
+    return sorted(test.lower()) == sorted(original.lower())
+print(is_anagram("listen", "silent"))
+print(is_anagram("triangle", "integral"))
+print(is_anagram("hello", "world")) 
+
+print()
+
+#задача 21
+def gimme(input_array):
+    return input_array.index(sorted(input_array)[1])
+print(gimme([2, 3, 1]))
+print(gimme([5, 10, 14]))
+
+print()
+
+#задача 22
+def xo(s):
+    return s.lower().count('x') == s.lower().count('o')
+print(xo("xo"))
+print(xo("xxoo"))
+print(xo("Hello, my name is Alex"))
+
+print()
+
+#задача 24
+def dont_give_me_five(start,end):
+    return sum('5' not in str(i) for i in range(start, end + 1))
+print(dont_give_me_five(1, 9))
+print(dont_give_me_five(4, 17))
+
+print()
