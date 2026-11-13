@@ -126,3 +126,53 @@ print(count_bits(10))
 print(count_bits(15))
 
 print()
+
+#задача 13
+def to_jaden_case(string):
+    return " ".join(word.capitalize() for word in string.split())
+print(to_jaden_case("hello world"))
+print(to_jaden_case("KKC collage is very good"))
+
+print()
+
+#задача 14
+def comp(array1, array2):
+    return array1 is not None and array2 is not None and sorted([x**2 for x in array1]) == sorted(array2)
+print(comp([1, 2, 3], [1, 4, 9]))
+print(comp([1, 2, 3], [1, 4, 8]))
+print(comp([1, 2, 3], [1, 4, 9, 16]))
+
+print()
+
+#задача 15
+def number(lines):
+    return [f"{i}: {line}" for i, line in enumerate(lines, 1)]
+print(number(["Hello", "World", "Python"]))
+print(number(["This", "is", "a", "test"]))
+
+print()
+
+#задача 16
+def is_valid_walk(walk):
+    return len(walk) == 10 and walk.count('n') == walk.count('s') and walk.count('e') == walk.count('w')
+print(is_valid_walk(['n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 's']))
+print(is_valid_walk(['n', 's', 'e', 'w', 'n', 's', 'e', 'w', 'n', 's']))
+
+print()
+
+#задача 17
+def number(bus_stops):
+    return sum(on - off for on, off in bus_stops)
+print(number([(10, 0), (3, 5), (5, 8)]))
+print(number([(3, 0), (9, 1), (4, 10), (12, 2), (6, 1), (7, 10)]))  
+
+print()
+
+#задача 18
+def high(x):
+    return max(x.split(), key=lambda w: sum(ord(c) - 96 for c in w))
+print(high("man i need a taxi up to ubud"))
+print(high("what time are we climbing up the volcano"))
+print(high("take me to semynak"))
+
+print()
